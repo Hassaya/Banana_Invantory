@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Banana Inventory</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  </head>
+
+  <body class=" bg-color">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+        <a class="bg-navlogo navbar-logo" href="/inventory">Banana Inventory</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mt-3">
+            <li class="nav-item dropdown">
+              <a class=" dropdown-toggle color-share-square" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                รายการอุปกรณ์
+              </a>
+              <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                <a class="color-share-square pl-3" href="/device">รายการอุปกรณ์</a>
+                <a class="color-share-square pl-3" href="/request">รายการคำขออุปกรณ์</a>
+                <a class="color-share-square pl-3" href="/manageuser">รายการผู้ใช้งาน</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="user">
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button class="btn btn-link pl-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                    <div class="row mt-3">
+                      <div class="col-10">
+                        <div class="row">
+                          <div class="icon-user col-1">
+                            <i class="icon-size fas fa-circle "></i><i class="size-icon-user fas fa-user"></i>
+                          </div>
+                          <div class="col-2 text-wrench" style="padding-left: 26px;">
+                              email@gmail.com <i class="fas fa-angle-down text-wrench"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>	
+                  </button>
+                  <div class="col-1">
+                    <i class="fas fa-bell text-wrench"><a href=""></a> </i> <i class="icon-size-2px fas fa-circle "></i>
+                  </div>
+                  <div class="dropdown-menu col-11" aria-labelledby="dropdownMenuButton">
+                    <a class="color-yellow pl-3" href="#" data-toggle="modal" data-target="#exampleModal" > <i class="fas fa-user"></i> แก้ไขโปรไฟล์</a> 
+                    <br>
+                    <a class="color-red pl-3" href="/sign_in"> <i class="fas fa-sign-out-alt"></i> Sign out</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-modalyellow text-white">
+            <h5 class="modal-title" id="exampleModal">แก้ไขโปรไฟล์</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body font-size16px">
+            <div class="row">
+              <div class="col-12 text-last">
+                <div class="row">
+                  <div class="col-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputprofilename">ชื่อ</label>
+                        <input type="profilename" class="form-control" id="exampleInputprofilename" aria-describedby="profilename" placeholder="Adisuk">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputnlastprofilenumber">หมายเลขซีเรียล</label>
+                        <input type="profilenumber" class="form-control" id="exampleInputprofilenumber" aria-describedby="profilenumber" placeholder="Muangma">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputprofileemail">ยี่ห้อ</label>
+                        <input type="profileemail" class="form-control" id="exampleInputprofileemail" aria-describedby="profileemail" placeholder="email@gmail.com">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputprofilepassword">รหัส</label>
+                        <input type="profilepassword" class="form-control" id="exampleprofilepassword" aria-describedby="profilepassword" placeholder="**********">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-6">
+                      <form>
+                          <div class="form-group">
+                          <label for="exampleInputprofilepassword2">ยืนยันรหัส</label>
+                          <input type="profilepassword2" class="form-control" id="exampleprofilepassword2" aria-describedby="profilepassword2" placeholder="**********">
+                          </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-end">
+            <button type="button" class="btn btn-yellow col-2" >บันทึก</button>
+            <button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
+<script>
+
+
+
