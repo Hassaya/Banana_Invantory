@@ -24,4 +24,10 @@ Rails.application.routes.draw do
   get '/device' , to: 'welcome#device'
 
   get '/request' , to: 'welcome#request'
+
+  get '/device_user' , to: 'welcome#device_user'
+
+  get '/home' , to: 'welcome#home'
+
+  get '/admin_login' , to: 'welcome#admin_login'
 end
