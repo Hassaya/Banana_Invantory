@@ -15,15 +15,11 @@
  */
  @import "button.scss";
 
-
- html {
-  background-color: #56baed;
-}
-
 body {
   color: #5D5D5D;
   font-family: Pridi !important; 
   height: 100vh;
+  background-color:  #F9F9FA;
 }
 
 a {
@@ -60,14 +56,10 @@ tr {
 
 
 
- .bg-color {
-  background-color: #F9F9FA;
-  width: 90em;
-}
+
 .bg-nav {
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.30000001192092896);
-  width: 100em;
   height: 61px;
 }
 
@@ -119,7 +111,6 @@ tr {
 }
 .color-yellow {
   color: #FFBB4D;
-  
 }
 
 .color-red {

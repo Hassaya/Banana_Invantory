@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="application.css">
+    <link rel="stylesheet" href="button.css">
+    <title>Banana Inventory</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <a class="navbar-brand nav-brand-bg text-center" href="#">
+        <span>Banana Inventory</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="navbar-nav mr-auto">
+					
+				</div>
+				<div class="dropdown">
+					<!-- <div class="icon-user">
+						<i class="icon-size fas fa-circle "></i>
+						<i class="size-icon-user fas fa-user"></i>
+					</div> -->
+					<a class="" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >User@banana.com</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal3"><i class="icon-editfrofile  fas fa-user"></i>แก้ไขโปรไฟล์</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="user_login.html"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
+						</div>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<i class="fas fa-bell"></i>
+			</div>
+	</nav>
+	<div class="alert alert-success" role="alert">
+		ส่งคำขอของท่านเรียบร้อยแล้ว  
+		<span class="font14-green" >กรุณารอผลการจัดชื้อจากผ่านจัดชื้อ</span>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true"><a class="text-wrench" href="user_pending">× </a> </span>
+		</button>
+	</div>
+		<div class="container">
+			<div class="col-12 title">
+				<div class="row justify-content-between">
+					<div class=".col-xl-9">
+						<h3>รายการอุปกรณ์</h3>
+					</div>
+					<div class=".col-xl-3">
+						<button type="button" class="btn btn-green" data-toggle="modal" data-target="#request2">
+							<i class="fas fa-plus-circle"></i>
+							เพิ่มความต้องการ 
+						</button>
+							<!-- Modal -->
+						<div class="modal fade" id="request2" tabindex="-1" role="dialog" aria-labelledby="request2" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header bg-modalgreen text-white">
+										<h5 class="modal-title" id="request2">เพิ่มความต้องการ</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body font-size16px">
+										<div class="row">
+											<div class="col-12 text-last">
+												<div class="row">
+													<div class="col-6">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputnamedevice1">ชื่ออุปกรณ์</label>
+																<input type="namedevice" class="form-control" id="exampleInputnamedevice1" aria-describedby="namedevice" placeholder="กรอกชื่ออุปกรณ์">
+															</div>
+														</form>
+													</div>
+													<div class="col-6">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputBrand1">ยี่ห้อ</label>
+																<input type="Brand" class="form-control" id="exampleInputBrand1" aria-describedby="Brand" placeholder="กรอกยี่ห้อ">
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-6">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputnversion1">รุ่น</label>
+																<input type="version" class="form-control" id="exampleInputversion1" aria-describedby="version" placeholder="กรอกรุ่น">
+															</div>
+														</form>
+													</div>
+													<div class="col-6">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputSize1">ขนาด</label>
+																<input type="Size" class="form-control" id="exampleInputSize1" aria-describedby="Size" placeholder="กรอกขนาด">
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-6">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputPrice1">ราคา</label>
+																<input type="Price" class="form-control" id="exampleInputPrice1" aria-describedby="Price" placeholder="กรอกราคา">
+															</div>
+														</form>
+													</div>
+													<div class="col-6">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputReason1">เหตุผลที่ต้องการ</label>
+																<input type="Reason" class="form-control" id="exampleInputReason1" aria-describedby="Reason" placeholder="กรอกเหตุผล">
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12">
+														<form>
+															<div class="form-group">
+																<label for="exampleInputlink1">ลิ้งตัวอย่าง</label>
+																<input type="link" class="form-control" id="exampleInputlink1" aria-describedby="link" placeholder="Ex.www.shoppee.com " > 
+																<i class="icon-right fas fa-upload color-share-square pointer "></i> 
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer justify-content-end">
+										<button type="button" class="btn btn-green col-2" >ส่ง</button>
+										<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="report-content mt-3">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead class="topics">
+							<tr>
+								<th style="border: 0px;">ชื่ออุปกรณ์ </th>
+								<th style="border: 0px;">หมายเลขซีเรียล</th>
+								<th style="border: 0px;">ยี่ห้อ </th>
+								<th style="border: 0px;">รุ่น</th>
+								<th style="border: 0px;">ขนาด</th>
+								<th style="border: 0px;">วันที่เริ่มใช้</th>
+								<th style="border: 0px;">สถานะ</th>
+								<th style="border: 0px;"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Monitor</td>
+								<td>-</td>
+								<td>LG</td>
+								<td>S200HQLHb</td>
+								<td>23 นิ้ว</td>
+								<td>-</td>
+								<td class="color-yellow">Pending</td>
+								<td class="icon"><i class="fas fa-edit color-yellow pointer " data-toggle="modal" data-target="#exampleModalEdit"></i>
+									<i class="fas fa-share-square color-blue pointer " data-toggle="modal" data-target="#exampleModalshare-square2"></i>
+									<i class="fas fa-wrench color-wrench pointer " data-toggle="modal" data-target="#exampleModalwrench"></i>
+								</td>
+							</tr>
+							<tr>
+								<td>Macbook Pro</td>
+								<td>C02M8GP8F5V7</td>
+								<td>Apple </td>
+								<td>MID 2013</td>
+								<td>24 นิ้ว</td>
+								<td>20/09/2561</td>
+								<td class="text-green">Accept</td>
+								<td class="icon">
+									<i class="fas fa-edit color-yellow pointer " data-toggle="modal" data-target="#exampleModalEdit"></i>
+									<i class="fas fa-share-square color-blue pointer " data-toggle="modal" data-target="#exampleModalshare-square"></i>
+									<i class="fas fa-wrench color-wrench pointer " data-toggle="modal" data-target="#exampleModalwrench"></i>
+								</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>30SBX74</td>
+								<td>LG</td>
+								<td>S200HQLHb</td>
+								<td>23 นิ้ว</td>
+								<td>03/08/2561</td>
+								<td class="text-green">Accept</td>
+								<td class="icon"><i class="fas fa-edit color-yellow pointer " data-toggle="modal" data-target="#exampleModalEdit"></i>
+									<i class="fas fa-share-square color-blue pointer " data-toggle="modal" data-target="#exampleModalshare-square2"></i>
+									<i class="fas fa-wrench color-wrench pointer " data-toggle="modal" data-target="#exampleModalwrench"></i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalshare-square2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelshare-square" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-share-square text-white">
+				<h5 class="modal-title" id="exampleModalLabelshare-square">ส่งคืน</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size16px">
+				<div class="row">
+					<div class="col-12 text-last">
+						เหตุผลที่ส่งคืน
+						<textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="3" placeholder="กรุณากรอกเหตุผล"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-blue col-2" >ส่ง</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal2 -->
+<div class="modal fade" id="exampleModalwrench" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelwrench" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-wrench text-white">
+				<h5 class="modal-title" id="exampleModalLabelwrench">อัพเกรด</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size14px">
+				<div class="row">
+					<div class="col-12 text-last">
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="กรุณากรอกความต้องการ"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-wrench col-2" >ส่ง</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal 3-->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEdit" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-modalyellow text-white">
+				<h5 class="modal-title" id="exampleModalEdit">แก้ไข</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size16px">
+				<div class="row">
+					<div class="col-12 text-last">
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnamedevice">ชื่ออุปกรณ์</label>
+										<input type="namedevice" class="form-control" id="exampleInputnamedevice" aria-describedby="namedevice" placeholder="กรอกชื่ออุปกรณ์">
+									</div>
+								</form>
+							</div>
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnSerialnumber">หมายเลขซีเรียล</label>
+										<input type="Serialnumber" class="form-control" id="exampleInputSerialnumber" aria-describedby="Serialnumber" placeholder="กรอกหมายเลขซีเรียล">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputBrand">ยี่ห้อ</label>
+										<input type="Brand" class="form-control" id="exampleInputBrand" aria-describedby="Brand" placeholder="กรอกยี่ห้อ">
+									</div>
+								</form>
+							</div>
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnversion">รุ่น</label>
+										<input type="version" class="form-control" id="exampleInputversion" aria-describedby="version" placeholder="กรอกรุ่น">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputSize">ขนาด</label>
+										<input type="Size" class="form-control" id="exampleInputSize" aria-describedby="Size" placeholder="กรอกขนาด">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-yellow col-2" >บันทึก</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal edit 1-->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEdit" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-modalyellow text-white">
+				<h5 class="modal-title" id="exampleModalEdit">แก้ไข</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size16px">
+				<div class="row">
+					<div class="col-12 text-last">
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnamedevice">ชื่ออุปกรณ์</label>
+										<input type="namedevice" class="form-control" id="exampleInputnamedevice" aria-describedby="namedevice" placeholder="กรอกชื่ออุปกรณ์">
+									</div>
+								</form>
+							</div>
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnSerialnumber">หมายเลขซีเรียล</label>
+										<input type="Serialnumber" class="form-control" id="exampleInputSerialnumber" aria-describedby="Serialnumber" placeholder="กรอกหมายเลขซีเรียล">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputBrand">ยี่ห้อ</label>
+										<input type="Brand" class="form-control" id="exampleInputBrand" aria-describedby="Brand" placeholder="กรอกยี่ห้อ">
+									</div>
+								</form>
+							</div>
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnversion">รุ่น</label>
+										<input type="version" class="form-control" id="exampleInputversion" aria-describedby="version" placeholder="กรอกรุ่น">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputSize">ขนาด</label>
+										<input type="Size" class="form-control" id="exampleInputSize" aria-describedby="Size" placeholder="กรอกขนาด">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-yellow col-2" >บันทึก</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal ส่งคืน 1-->
+<div class="modal fade" id="exampleModalshare-square" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelshare-square" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-share-square text-white">
+				<h5 class="modal-title" id="exampleModalLabelshare-square">ส่งคืน</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size16px">
+				<div class="row">
+					<div class="col-12 text-last">
+						เหตุผลที่ส่งคืน
+						<textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="3" placeholder="กรุณากรอกเหตุผล"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-blue col-2" >ส่ง</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal อัพเกรด-->
+<div class="modal fade" id="exampleModalwrench" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelwrench" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-wrench text-white">
+				<h5 class="modal-title" id="exampleModalLabelwrench">อัพเกรด</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size14px">
+				<div class="row">
+					<div class="col-12 text-last">
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="กรุณากรอกความต้องการ"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-wrench col-2" >ส่ง</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editpofile" tabindex="-1" role="dialog" aria-labelledby="editpofile" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-modalyellow text-white">
+				<h5 class="modal-title" id="exampleModal">แก้ไขโปรไฟล์</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body font-size16px">
+				<div class="row">
+					<div class="col-12 text-last">
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputprofilename">ชื่อ</label>
+										<input type="profilename" class="form-control" id="exampleInputprofilename" aria-describedby="profilename" placeholder="Adisuk">
+									</div>
+								</form>
+							</div>
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputnlastprofilenumber">นามสกุล</label>
+										<input type="profilenumber" class="form-control" id="exampleInputprofilenumber" aria-describedby="profilenumber" placeholder="Muangma">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputprofileemail">ยี่ห้อ</label>
+										<input type="profileemail" class="form-control" id="exampleInputprofileemail" aria-describedby="profileemail" placeholder="email@gmail.com">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputprofilepassword">รหัส</label>
+										<input type="profilepassword" class="form-control" id="exampleprofilepassword" aria-describedby="profilepassword" placeholder="**********">
+									</div>
+								</form>
+							</div>
+							<div class="col-6">
+								<form>
+										<div class="form-group">
+										<label for="exampleInputprofilepassword2">ยืนยันรหัส</label>
+										<input type="profilepassword2" class="form-control" id="exampleprofilepassword2" aria-describedby="profilepassword2" placeholder="**********">
+										</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-end">
+				<button type="button" class="btn btn-yellow col-2" >บันทึก</button>
+				<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+			</div>
+		</div>
+	</div>
+</div>
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-modalyellow text-white">
+					<h5 class="modal-title" id="exampleModal3">แก้ไขโปรไฟล์</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body font-size16px">
+					<div class="row">
+						<div class="col-12 text-last">
+							<div class="row">
+								<div class="col-6">
+									<form>
+										<div class="form-group">
+											<label for="exampleInputprofilename">ชื่อ</label>
+											<input type="profilename" class="form-control" id="exampleInputprofilename" aria-describedby="profilename" placeholder="Adisuk">
+										</div>
+									</form>
+								</div>
+								<div class="col-6">
+									<form>
+										<div class="form-group">
+											<label for="exampleInputnlastprofilenumber">หมายเลขซีเรียล</label>
+											<input type="profilenumber" class="form-control" id="exampleInputprofilenumber" aria-describedby="profilenumber" placeholder="Muangma">
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<form>
+										<div class="form-group">
+											<label for="exampleInputprofileemail">ยี่ห้อ</label>
+											<input type="profileemail" class="form-control" id="exampleInputprofileemail" aria-describedby="profileemail" placeholder="email@gmail.com">
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<form>
+										<div class="form-group">
+											<label for="exampleInputprofilepassword">รหัส</label>
+											<input type="profilepassword" class="form-control" id="exampleprofilepassword" aria-describedby="profilepassword" placeholder="**********">
+										</div>
+									</form>
+								</div>
+								<div class="col-6">
+										<form>
+												<div class="form-group">
+												<label for="exampleInputprofilepassword2">ยืนยันรหัส</label>
+												<input type="profilepassword2" class="form-control" id="exampleprofilepassword2" aria-describedby="profilepassword2" placeholder="**********">
+												</div>
+										</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer justify-content-end">
+					<button type="button" class="btn btn-yellow col-2" >บันทึก</button>
+					<button type="button" class="btn btn-gray col-2"data-dismiss="modal">ยกเลิก</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
