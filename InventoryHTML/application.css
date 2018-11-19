@@ -36,6 +36,7 @@ tr {
   background-color: #FFFFFF;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
+
 .icon-size {
   font-size:30px;
   color: #BC59EC;
@@ -121,8 +122,6 @@ tr {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
   cursor: pointer;
   transition: all 0.25s ease;
-  
-  
 }
 
 .icon-color {
