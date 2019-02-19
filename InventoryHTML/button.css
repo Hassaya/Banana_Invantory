@@ -1,0 +1,125 @@
+
+.text-red {
+	color: #e54d41;
+  }
+  .btn-blue {
+	background-color: #64cdec;
+	border: 1px solid #64cdec !important;
+	color: #fff;
+  }
+  .btn-blue:hover {
+	background-color: transparent;
+	color: #64cdec;
+  }
+  .btn-dackblue {
+	background-color: #00baff;
+	border: 1px solid #00baff !important;
+	color: #fff;
+  }
+  .btn-dackblue:hover {
+	background-color: transparent;
+	color: #00baff;
+  }
+  .btn-drake {
+	border: 1px solid #626f7d !important;
+	color: #626f7d;
+  }
+  .btn-drake:hover {
+	background-color: transparent;
+	color: #fff;
+  }
+  .btn-green {
+	background-color: #65d9b4;
+	border: 1px solid #65d9b4 !important;
+	color: #fff;
+  }
+  .btn-green:hover {
+	background-color: transparent;
+	color: #65d9b4;
+  }
+  .btn-gray {
+	background-color: #fff;
+	border: 1px solid #979797 !important;
+	color: #979797;
+  }
+  .btn-gray:hover {
+	background-color: transparent;
+	color: #979797;
+  }
+  .btn-red {
+	background-color: #d64e3b;
+	border: 1px solid #d64e3b !important;
+	color: #fff;
+	width: 83px;
+	height: 38px;
+  }
+  .btn-red:hover {
+	background-color: transparent;
+	color: #d64e3b;
+  }
+  .btn-accept {
+	background-color: #6bb987;
+	border: 1px solid #6bb987 !important;
+	color: #fff;
+	width: 83px;
+	height: 38px;
+  }
+  .btn-accept:hover {
+	background-color: transparent;
+	color: #6bb987;
+  }
+  .btn-black {
+	background-color: #323d49;
+	border: 1px solid #323d49 !important;
+	color: #fff;
+	width: 350px;
+	height: 80px;
+  }
+  .btn-black:hover {
+	background-color: transparent;
+	color: #323d49;
+  }
+  .btn-purple {
+	background-color: #6869ae;
+	border: 1px solid #6869ae !important;
+	color: #fff;
+  }
+  .btn-purple:hover {
+	background-color: transparent;
+	color: #6869ae;
+  }
+  .btn-yellow {
+	background-color: #f5cb70;
+	border: 1px solid #f5cb70 !important;
+	color: #fff;
+  }
+  .btn-yellow:hover {
+	background-color: transparent;
+	color: #f5cb70;
+  }
+  .btn-wrench {
+	background-color: #5a5a5a;
+	border: 1px solid #5a5a5a !important;
+	color: #fff;
+  }
+  .btn-wrench:hover {
+	background-color: transparent;
+	color: #5a5a5a;
+  }
+  .number {
+	border: 0;
+  }
+  .link-user {
+	background-color: #65d9b4;
+	border-radius: 3px;
+	width: 726px;
+	height: 140px;
+  }
+  .link-Admin {
+	background-color: #65d9b4;
+	border-radius: 3px;
+	width: 726px;
+	height: 140px;
+	padding-top: 30px;
+  }
+  

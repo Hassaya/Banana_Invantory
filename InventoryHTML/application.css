@@ -1,0 +1,153 @@
+
+body {
+  color: #5d5d5d;
+  font-family: Pridi !important;
+  height: 100vh;
+  background-color: #f9f9fa;
+}
+a {
+  color: #5d5d5d;
+}
+th {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.33px;
+  line-height: 19px;
+  text-align: left;
+}
+tr {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.33px;
+  line-height: 19px;
+  text-align: left;
+}
+.nav-brand-bg{
+  height: 60px;
+  background-color: #BC59EC;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  font-family: piron;
+}
+.navbar-custom{
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
+.icon-size {
+  font-size:30px;
+  color: #BC59EC;
+
+}
+.size-icon-user {
+ color: #FFFFFF;
+ font-size: 16px;
+ position: absolute;
+ top:8px;
+ left: 24px;
+}
+.dropdown {
+  padding: 0 16px;
+  
+}
+.icon-editfrofile {
+  padding-right: 8px;
+}
+.report-content {
+  padding: 30px;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 0 5px 13px 0 rgba(0,0,0,0.3);
+}
+.title {
+  padding-top: 4em;
+}
+.text-green{
+  color: #6BB987;
+}
+.color-yellow {
+  color: #FFBB4D;
+}
+
+.color-red {
+  color: #D23D28;
+}
+.color-blue {
+  color:  #64CDEC;
+}
+.color-cog {
+  color: #5D5D5D;
+}
+.bg-share-square {
+  background-color: #64CDEC;
+}
+.bg-modalgreen {
+  background-color: #65D9B4;
+}
+.bg-modalred {
+  background-color: #D64E3B;
+}
+.bg-modalpurple {
+  background-color: #6869AE;
+}
+.bg-wrench {
+  background-color: #5A5A5A;
+}
+.bg-modalyellow {
+  background-color: #FFBB4D;
+}
+.icon-right {
+  position: absolute;
+  top: 42px;
+  right: 24px;
+}
+.formulario{
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 510px;
+  height: 364px;
+  background-color: #FFFFFF;
+}
+
+.menu-inven {
+  padding-top: 10em;
+}
+.menu-btn {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.icon-color {
+  color: #BC59EC;
+  font-size: 70px;
+  font-weight: 400;
+
+}
+
+.col-lg-3 .col-sm-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.wraptocenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+}
+.Search {
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  width: 216px;
+  height: 41px;
+}
